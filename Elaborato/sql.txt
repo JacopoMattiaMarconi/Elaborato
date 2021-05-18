@@ -1,0 +1,6 @@
+INSERT INTO `dipendenti` (`idDipendente`, `nomeDipendente`, `cognomeDipendente`, `dataNDipendente`, `indirizzoDipendente`, `codFiscDipendente`, `mailDipendente`, `telefonoDipendente`, `ruoloDipendente`) VALUES (NULL, 'Fabio', 'Rossi', '1983-09-21', 'via Pascoli 10', 'RSSFBO38H29K987S', 'fabio.rossi@allevamentoittico.com', '2910983221', 'Tecnico');
+INSERT INTO `dipendenti` (`idDipendente`, `nomeDipendente`, `cognomeDipendente`, `dataNDipendente`, `indirizzoDipendente`, `codFiscDipendente`, `mailDipendente`, `telefonoDipendente`, `ruoloDipendente`) VALUES (NULL, 'Carlotta', 'Marrone', '1991-05-18', 'piazza Repubblica 4', 'MRRCRL49O21P394E', 'carlotta.marrone@allevamentoittico.com', '9382733121', 'Amministrativo');
+
+INSERT INTO `accessi` (`mailAccesso`, `dataUltimaModifica`, `password`) VALUES ('carlotta.marrone@allevamentoittico.com', '2021-05-18', PASSWORD('carlottamarrone'));
+
+INSERT INTO `clienti` (`idCliente`, `nomeCliente`, `pIVA`, `mailCliente`, `indirizzoCliente`, `telefonoCliente`) VALUES (NULL, 'Rio Mare s.r.l.', '193736542', 'amministrazione@riomare.it', 'via Magellano 63', '0228276243');
