@@ -1,0 +1,4 @@
+a {text-outline:none; text-decoration:none; text-align:center;}
+a:hover{color:red}
+body{width: 1341px; background-color:black;  background-attachment: fixed; background-repeat:no-repeat; background-size:1350px 800px;}
+blockquote {font-size:18; padding-left:2em; padding-right:2em; text-align:justify;}
