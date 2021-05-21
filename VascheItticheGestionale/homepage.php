@@ -2,7 +2,7 @@
 <head>
 <link rel="stylesheet" href="Stili.css" type="text/css">
 </head>
-<body style="background-image: url(valeriia-miller-Dew8ESyRzUw-unsplash.jpg);">
+<body style="background-image: url(photo-1534575180408-b7d7c0136ee8.jpg);">
 <?php 
 include 'menu.php';
 ?>

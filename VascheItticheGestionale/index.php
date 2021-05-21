@@ -5,12 +5,12 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="StiliLogin.css" type="text/css">
 </head>
-<body style="background-image: url(valeriia-miller-Dew8ESyRzUw-unsplash.jpg);">
+<body style="background-color: #eee">
 
-	<div class="sidenav">
+	<div class="sidenav" style="background-image: url(ZG52MF.png);">
          <div class="login-main-text">
-            <h2>Area riservata<br>Gestione personale aziendale</h2>
-            <p>Accedi all'area riservata.</p>
+            <h1>Area riservata<br>Gestione personale aziendale</h1>
+            <p style="font-size:20px;">Accedi all'area riservata.</p>
          </div>
     </div>
 	
