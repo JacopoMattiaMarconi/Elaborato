@@ -7,7 +7,7 @@
 include 'menuCliente3.php';
 ?>
 <center>
-<div class="w-75 p-3" style="background-color: #eee;">
+<div class="w-50 p-3" style="background-color: #eee;">
 <form>
   <div class="align-items-center">
     <div class="col-auto my-1">

@@ -1,3 +1,8 @@
+<?php
+session_start();
+include 'libs/db_connect.php';
+$mail=getArr($_SESSION,'mail');
+?>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -7,6 +12,11 @@
 <div class="fixed-top">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <br><br><br>
+<?php
+if (stripos($mail, 'allevamentoittico.com') == false) {
+	header('Location: login.php');
+}
+?>
   <a class="navbar-brand" href="#" style="font-size:30;">Area tecnica</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

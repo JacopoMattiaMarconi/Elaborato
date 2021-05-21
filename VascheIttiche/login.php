@@ -19,18 +19,21 @@ include 'menu3.php';
       <div class="main">
          <div class="col-md-5 col-sm-12">
             <div class="login-form">
-               <form>
+               <form  action="doLogin.php" method="POST">
+			   
                   <div class="form-group">
                      <label>Mail</label>
-                     <input type="text" class="form-control" placeholder="Mail">
+                     <input type="text" class="form-control" name="mail" placeholder="Mail">
                   </div>
+				  
                   <div class="form-group">
                      <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password">
+                     <input type="password" class="form-control" name="password" placeholder="Password">
                   </div>
+				  
                   <button type="submit" class="btn btn-black">Accedi</button>
-                  <button type="submit" class="btn btn-secondary">Registrati</button>
                </form>
+			   Nuovo utente? <a href="#"><button class="btn btn-secondary">Registrati</button></a>
             </div>
          </div>
       </div>

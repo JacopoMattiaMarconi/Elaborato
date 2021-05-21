@@ -1,3 +1,10 @@
+<?php
+session_start();
+include 'libs/util.php';
+include 'libs/db_connect.php';
+$mail=getArr($_SESSION,'mail');
+$nome=getArr($_SESSION,'nome');
+?>
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -7,7 +14,13 @@
 <div class="fixed-top">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <br><br><br>
-  <a class="navbar-brand" href="#" style="font-size:30;">Ciao, Utente</a>
+<?php
+if ($nome=="" && $mail==""){
+	header('Location: login.php');
+}
+echo"<a class=\"navbar-brand\" href=\"#\" style=\"font-size:30;\">Ciao, $nome!</a>";
+?>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,7 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="acquisti.php" style="font-size:25; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acquista&nbsp;&nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="acquista.php" style="font-size:25; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acquista&nbsp;&nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="noleggi.php" style="font-size:25;">I miei noleggi&nbsp;&nbsp;&nbsp;&nbsp;</a>
