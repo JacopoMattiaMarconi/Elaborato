@@ -26,13 +26,16 @@ echo"<a class=\"navbar-brand\" href=\"#\" style=\"font-size:30;\">Ciao, $nome!</
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="acquista.php" style="font-size:25;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acquista&nbsp;&nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="acquista.php" style="font-size:25;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acquista&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="noleggi.php" style="font-size:25; color:red;">I miei noleggi&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="nav-link" href="noleggi.php" style="font-size:25; color:red;">I miei noleggi&nbsp;&nbsp;</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="bolletta.php" style="font-size:25;">Bolletta&nbsp;&nbsp;</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="prenotazione.php" style="font-size:25;">Richiedi visita&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="nav-link" href="prenotazione.php" style="font-size:25;">Richiedi visita&nbsp;&nbsp;</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="logout.php" style="font-size:25;">Logout</a>

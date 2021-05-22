@@ -1,7 +1,9 @@
 <?php
 session_start();
+include 'libs/util.php';
 include 'libs/db_connect.php';
 $mail=getArr($_SESSION,'mail');
+$nome=getArr($_SESSION,'nome');
 ?>
 <html>
 <head>
@@ -13,11 +15,11 @@ $mail=getArr($_SESSION,'mail');
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <br><br><br>
 <?php
-if (stripos($mail, '@allevamentoittico.com') == false) {
+if ($nome=="" && $mail==""){
 	header('Location: login.php');
 }
+echo"<a class=\"navbar-brand\" href=\"#\" style=\"font-size:30;\">Ciao, $nome!</a>";
 ?>
-  <a class="navbar-brand" href="#" style="font-size:30;">Area tecnica</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,13 +27,16 @@ if (stripos($mail, '@allevamentoittico.com') == false) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="prodottiTecnico.php" style="font-size:25; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prodotti&nbsp;&nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="acquista.php" style="font-size:25;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Acquista&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="vasche.php" style="font-size:25;">Vasche&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="nav-link" href="noleggi.php" style="font-size:25;">I miei noleggi&nbsp;&nbsp;</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="agenda.php" style="font-size:25;">Agenda&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="nav-link" href="bolletta.php" style="font-size:25; color:red;">Bolletta&nbsp;&nbsp;</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="prenotazione.php" style="font-size:25;">Richiedi visita&nbsp;&nbsp;</a>
       </li>
 	  <li class="nav-item">
         <a class="nav-link" href="logout.php" style="font-size:25;">Logout</a>

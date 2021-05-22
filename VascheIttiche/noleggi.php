@@ -2,7 +2,6 @@
 session_start();
 include 'libs/util.php';
 include 'libs/db_connect.php';
-//$mail=getArr($_SESSION,'mail');
 ?>
 <html>
 <head>
@@ -16,7 +15,8 @@ include 'menuCliente2.php';
 <div class="w-50 p-3" style="background-color: #eee;">
 
 <?php
-$query = "select * from modelli m join vasche v on v.idModello=m.idModello join noleggi n on n.idVasca=v.idVasca join clienti c on c.idCliente=n.idCliente where c.mailCliente='admin@alemar.com' group by (m.idModello)";
+$query = "select * from modelli m join vasche v on v.idModello=m.idModello join noleggi n on n.idVasca=v.idVasca join 
+		clienti c on c.idCliente=n.idCliente where c.mailCliente='$mail' group by (m.idModello)";
 	try{
 		$res=$con->query($query);
 	}catch(PDOException $ex) {

@@ -19,7 +19,9 @@ include 'menuTecnico3.php';
 <div class="w-50 p-3" style="background-color: #eee;">
 
 <?php
-$query = "select p.dataVisita, c.nomeCliente, c.indirizzoCliente, c.citta, p.tipologiaPrenotazione from prenotazioni p join dipendenti d on d.idDipendente=p.idDipendente join clienti c on c.idCliente=p.idCliente where d.mailDipendente='$mail' order by dataVisita";
+$query = "select p.dataVisita, c.nomeCliente, c.indirizzoCliente, c.citta, p.tipologiaPrenotazione 
+from prenotazioni p join dipendenti d on d.idDipendente=p.idDipendente join clienti c on 
+c.idCliente=p.idCliente where d.mailDipendente='$mail' order by dataVisita";
 	try{
 		$res=$con->query($query);
 	}catch(PDOException $ex) {
